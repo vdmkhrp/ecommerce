@@ -1,0 +1,43 @@
+.card {
+  border-radius: 40px;
+  background-image: var(--image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__title {
+    font-size: 90px;
+    line-height: 0.8333;
+    color: $light;
+  }
+
+  &--main {
+    padding: 24px;
+
+    @media (width >= 768px) {
+      padding: 60px;
+    }
+  }
+
+  &--main {
+    padding: 24px;
+
+    @media (width >= 768px) {
+      padding: 60px;
+    }
+  }
+
+  &-- {
+    padding: 24px;
+
+    @media (width >= 768px) {
+      padding: 60px;
+    }
+  }
+}

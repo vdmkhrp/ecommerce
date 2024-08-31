@@ -1,2 +1,20 @@
 // base
 @import "./scss/base/custom-reset";
+@import "./scss/base/variables";
+@import "./scss/base/typography";
+@import "./scss/base/general";
+
+
+// sections
+@import "./scss/section/header";
+@import "./src/scss/section/hero";
+
+
+//components
+@import "./scss/components/icon";
+@import "./scss/components/form";
+@import "./scss/components/burger-btn";
+@import "./scss/components/overlay";
+@import "./scss/components/card";
+@import "./scss/components/block-info";
+@import "./scss/components/main-btn";

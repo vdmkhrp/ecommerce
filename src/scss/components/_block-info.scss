@@ -1,0 +1,16 @@
+.block-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  &__title {
+    font-size: 65px;
+    letter-spacing: -0.0615em;
+    color: rgba($black--400, 0.2);
+  }
+
+  &__text {
+    font-size: 18px;
+    color: rgba($black--400, 0.8);
+  }
+}

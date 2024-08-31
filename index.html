@@ -1,12 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/styles.scss">
-  <title>Ecommerce</title>
-</head>
-<body>
-<script src="./src/js/script.js"></script>
-</body>
+  {{> head }}
+  <body>
+    {{> sprite }}
+    <div class="overlay"></div>
+    <header class="header">
+      <div class="container header__container">
+        <nav class="header__nav">
+          <a href="#!" class="header__link">English</a>
+          <a href="#!" class="header__link">Dollar</a>
+        </nav>
+        <nav class="header__nav">
+          <a href="#!" class="header__link">Tracking Package</a>
+          <a href="#!" class="header__link">FAQ</a>
+          <a href="#!" class="header__link">About Us</a>
+          <a href="#!" class="header__link">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__head">
+            <a href="#!" class="hero__logo">ecommerce</a>
+            <button type="button" class="burger-btn">
+              <span class="burger-btn__item"></span>
+            </button>
+            <div class="hero__menu">
+              <nav class="hero__nav">
+                <form class="form hero__form">
+                  <input
+                    type="search"
+                    placeholder="Search"
+                    class="form__input-search"
+                  />
+                  <button type="submit" class="form__button-search">
+                    <svg class="icon icon--20">
+                      <use href="#search"></use>
+                    </svg>
+                  </button>
+                </form>
+                <ul class="hero__list">
+                  <li class="hero__list-item">
+                    <a href="#!" class="hero__link hero__link--active"
+                      >All Category
+                      <svg class="icon icon--20">
+                        <use href="#chevron_down"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="hero__list-item">
+                    <a href="#!" class="hero__link">Gift Cards</a>
+                  </li>
+                  <li class="hero__list-item">
+                    <a href="#!" class="hero__link">Special Event</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="hero__btn-group">
+                <button class="hero__button">
+                  <svg class="icon icon--24">
+                    <use href="#heart"></use>
+                  </svg>
+                </button>
+                <button class="hero__button">
+                  <svg class="icon icon--24">
+                    <use href="#user"></use>
+                  </svg>
+                </button>
+                <button class="hero__button">
+                  <svg class="icon icon--21">
+                    <use href="#cart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hero__grid">
+            <a href="#!" class="card" style="--image: url('./img/hero_1.webp')">
+              <div class="card__content">
+                <h2 class="card__title">Color of Summer Outfit</h2>
+                <p class="card__text">
+                  100+ Collections for your outfit inspirations in this summer
+                </p>
+                <span class="card__btn">VIEW COLLECTIONS</span>
+              </div>
+            </a>
+            <div class="hero__wrapper">
+            <a href="#!" class="card" style="--image: url('./img/hero_2.webp')">
+              <h2 class="card__title">Outdoor Active</h2>
+            </a>
+            <a href="#!" class="card" style="--image: url('./img/hero_3.webp')">
+              <h2 class="card__title">Casual Comfort</h2>
+            </a>
+            <a href="#!" class="card" style="--image: url('./img/hero_4.webp')">
+              <div class="card__content">
+                <h2 class="card__title">Say it with Shirt</h2>
+                <svg class="icon icon--50">
+                  <use href="#short_right"></use>
+                </svg>
+              </div>
+            </a>
+            <a href="#!" class="card" style="--image: url('./img/hero_5.webp')">
+              <div class="card__content">
+                <h2 class="card__title">Funky never
+                  get old</h2>
+                <svg class="icon icon--50">
+                  <use href="#short_right"></use>
+                </svg>
+              </div>
+            </a>
+          </div>
+            <div class="block-info">
+                <h2 class="block-info__title">Casual Inspirations</h2>
+                <p class="block-info__text">
+                  Our favorite combinations for casual outfit that can inspire
+                  you to apply on your daily activity.
+                </p>
+                <button type="button" class="main-btn block-info__btn">
+                  BROWSE INPIRATIONS
+                </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./src/js/script.js"></script>
+  </body>
 </html>
