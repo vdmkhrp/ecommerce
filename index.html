@@ -77,54 +77,86 @@
             </div>
           </div>
           <div class="hero__grid">
-            <a href="#!" class="card" style="--image: url('./img/hero_1.webp')">
+            <a
+              href="#!"
+              class="card card--main hero__grid-first"
+              style="--image: url('./img/hero_1.webp')"
+            >
               <div class="card__content">
                 <h2 class="card__title">Color of Summer Outfit</h2>
                 <p class="card__text">
                   100+ Collections for your outfit inspirations in this summer
                 </p>
-                <span class="card__btn">VIEW COLLECTIONS</span>
+                <span class="card__btn main-btn main-btn--dark"
+                  >view collections</span
+                >
               </div>
             </a>
-            <div class="hero__wrapper">
-            <a href="#!" class="card" style="--image: url('./img/hero_2.webp')">
-              <h2 class="card__title">Outdoor Active</h2>
-            </a>
-            <a href="#!" class="card" style="--image: url('./img/hero_3.webp')">
-              <h2 class="card__title">Casual Comfort</h2>
-            </a>
-            <a href="#!" class="card" style="--image: url('./img/hero_4.webp')">
-              <div class="card__content">
-                <h2 class="card__title">Say it with Shirt</h2>
-                <svg class="icon icon--50">
-                  <use href="#short_right"></use>
-                </svg>
+            <div class="hero__wrapper swiper">
+              <div class="swiper-wrapper">
+                <a
+                  href="#!"
+                  class="card hero__grid-second swiper-slide"
+                  style="--image: url('./img/hero_2.webp')"
+                >
+                  <h2 class="card__title card__title--small card__title--dark">
+                    Outdoor Active
+                  </h2>
+                </a>
+                <a
+                  href="#!"
+                  class="card hero__grid-third swiper-slide"
+                  style="--image: url('./img/hero_3.webp')"
+                >
+                  <h2 class="card__title card__title--small card__title--dark">
+                    Casual Comfort
+                  </h2>
+                </a>
+                <a
+                  href="#!"
+                  class="card hero__grid-fifth swiper-slide"
+                  style="--image: url('./img/hero_4.webp')"
+                >
+                  <div class="card__box">
+                    <h2 class="card__title card__title--small">
+                      Say it<br />with Shirt
+                    </h2>
+                    <svg class="icon icon--50">
+                      <use href="#short_right"></use>
+                    </svg>
+                  </div>
+                </a>
+                <a
+                  href="#!"
+                  class="card hero__grid-sixth swiper-slide"
+                  style="--image: url('./img/hero_5.webp')"
+                >
+                  <div class="card__box">
+                    <h2 class="card__title card__title--small">
+                      Funky never<br />
+                      get old
+                    </h2>
+                    <svg class="icon icon--50">
+                      <use href="#short_right"></use>
+                    </svg>
+                  </div>
+                </a>
               </div>
-            </a>
-            <a href="#!" class="card" style="--image: url('./img/hero_5.webp')">
-              <div class="card__content">
-                <h2 class="card__title">Funky never
-                  get old</h2>
-                <svg class="icon icon--50">
-                  <use href="#short_right"></use>
-                </svg>
-              </div>
-            </a>
-          </div>
-            <div class="block-info">
-                <h2 class="block-info__title">Casual Inspirations</h2>
-                <p class="block-info__text">
-                  Our favorite combinations for casual outfit that can inspire
-                  you to apply on your daily activity.
-                </p>
-                <button type="button" class="main-btn block-info__btn">
-                  BROWSE INPIRATIONS
-                </button>
+            </div>
+            <div class="block-info hero__grid-fourth">
+              <h2 class="block-info__title">Casual Inspirations</h2>
+              <p class="block-info__text">
+                Our favorite combinations for casual outfit that can inspire you
+                to apply on your daily activity.
+              </p>
+              <button type="button" class="main-btn block-info__btn">
+                BROWSE INPIRATIONS
+              </button>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <script src="./src/js/script.js"></script>
+    <script src="./src/js/script.js" type="module"></script>
   </body>
 </html>
