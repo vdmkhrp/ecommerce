@@ -1,0 +1,124 @@
+.footer {
+  background-color: $black--400;
+  color: $light;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (width >= 768px) {
+    padding-top: 60px;
+    padding-bottom: 105px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    column-gap: 200px;
+
+    @media (width >= 768px) {
+      flex-direction: row;
+      row-gap: 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__logo {
+    width: fit-content;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.25;
+    color: $light;
+    text-transform: uppercase;
+    transition: color $animation-duration linear;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $soft-red;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.5714;
+    opacity: 0.52;
+    max-width: 290px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-top: 30px;
+
+    @media (width >= 768px) {
+      flex-direction: row;
+      column-gap: 10px;
+      padding-top: 15px;
+    }
+  }
+
+  &__input {
+    padding: 12px 16px;
+    background-color: transparent;
+    border-color: rgba($light, 0.52);
+    color: $light;
+    width: 250px;
+    border-radius: 40px;
+
+    &:focus {
+      border-color: $soft-red;
+
+      &::placeholder {
+        color: $light;
+        transition: color $animation-duration ease;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 40px;
+
+    @media (width >= 768px) {
+      column-gap: 100px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__list-title {
+    font-size: 11px;
+    line-height: 1.4545;
+    font-weight: 600;
+    letter-spacing: 0.0909em;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2307;
+    color: rgba($light, 0.52);
+    transition: color $animation-duration ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $soft-red;
+      }
+    }
+  }
+}

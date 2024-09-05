@@ -47,4 +47,15 @@
       }
     }
   }
+
+  &--light {
+    background-color: $light;
+    color: $black--400;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $soft-red;
+      }
+    }
+  }
 }
