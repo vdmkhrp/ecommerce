@@ -1,4 +1,4 @@
-$icon-sizes: 20, 21, 24, 50;
+$icon-sizes: 20, 21, 24, 32, 50;
 
 .icon {
   display: inline-block;
@@ -8,5 +8,12 @@ $icon-sizes: 20, 21, 24, 50;
     &--#{$s} {
       width: #{$s}px;
     }
+  }
+}
+
+
+.icon--32 {
+  @media (width >= 768px) {
+    width: 48px;
   }
 }

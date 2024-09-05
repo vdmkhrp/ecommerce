@@ -16,10 +16,6 @@ body {
   @media (width >= 375px) {
     padding-inline: 16px;
   }
-
-  @media (width >= 768px) {
-    padding-inline: 60px;
-  }
 }
 
 .svg-settings {
@@ -33,4 +29,8 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
 }

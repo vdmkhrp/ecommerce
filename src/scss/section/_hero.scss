@@ -22,7 +22,7 @@
     @media (width >= 1024px) {
       flex-direction: row;
       align-items: center;
-      column-gap: 40px;
+      column-gap: 30px;
       row-gap: 0;
     }
   }
@@ -137,7 +137,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, min-content);
-    overflow: hidden;
     gap: 8px;
 
     @media (hover: hover) {
@@ -165,6 +164,7 @@
   }
 
   &__grid-second {
+    background-image: url("./img/hero_2.webp");
     @media (width >= 768px) {
       grid-area: second;
     }
@@ -172,6 +172,7 @@
 
   &__grid-third {
     grid-row: 3 / 3;
+    background-image: url("./img/hero_3.webp");
 
     @media (width >= 768px) {
       grid-area: third;
@@ -186,6 +187,7 @@
 
   &__grid-fifth {
     grid-row: 2 / 3;
+    background-image: url("./img/hero_4.webp");
 
     @media (width >= 768px) {
       grid-area: fifth;
@@ -194,6 +196,7 @@
 
   &__grid-sixth {
     grid-row: 2 / 3;
+    background-image: url("./img/hero_5.webp");
 
     @media (width >= 768px) {
       grid-area: sixth;
@@ -201,14 +204,12 @@
   }
 
   &__wrapper {
-    overflow: auto;
     display: flex;
     column-gap: 8px;
     grid-row: 2 / 3;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    min-width: 0; // совет фрилансера
 
     @media (width >= 768px) {
       display: contents;

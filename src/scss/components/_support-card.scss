@@ -1,0 +1,39 @@
+.support-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: $light;
+    background-color: $black--400;
+
+    @media (width >= 768px) {
+      width: 120px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+
+  &__title {
+    font-size: clamp(24px, 2vw, 30px);
+    font-weight: 500;
+    line-height: 1.6666;
+    letter-spacing: -0.0416em;
+  }
+
+  &__text {
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.625;
+    letter-spacing: -0.01875em;
+  }
+}

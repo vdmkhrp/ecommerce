@@ -1,0 +1,31 @@
+.service {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @media (width >= 768px) {
+      row-gap: 56px;
+    }
+  }
+
+  &__title {
+    @extend .heading;
+    max-width: 558px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 32px;
+
+    @media (width >= 768px) {
+      column-gap: 45px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

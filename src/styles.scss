@@ -4,15 +4,8 @@
 @import "./scss/base/typography";
 @import "./scss/base/general";
 
-
 //slider
 @import "swiper/scss";
-
-
-// sections
-@import "./scss/section/header";
-@import "./src/scss/section/hero";
-
 
 //components
 @import "./scss/components/icon";
@@ -22,3 +15,14 @@
 @import "./scss/components/card";
 @import "./scss/components/block-info";
 @import "./scss/components/main-btn";
+@import "./scss/components/circle";
+@import "./scss/components/product-card";
+@import "./scss/components/support-card";
+
+// sections
+@import "./scss/section/header";
+@import "./scss/section/hero";
+@import "./scss/section/trending";
+@import "./scss/section/blog";
+@import "./scss/section/service";
+@import "./scss/section/from-blog";

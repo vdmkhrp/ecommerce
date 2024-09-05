@@ -32,6 +32,8 @@
 
   &--small {
     padding: 13px 26px;
+    width: fit-content;
+    min-width: 93px;
   }
 
   &--dark {
@@ -44,10 +46,5 @@
         background-color: transparent;
       }
     }
-  }
-
-  &--active {
-    background-color: $black--400;
-    color: $light;
   }
 }
