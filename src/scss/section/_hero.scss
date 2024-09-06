@@ -208,17 +208,4 @@
       grid-area: sixth;
     }
   }
-
-  &__wrapper {
-    display: flex;
-    column-gap: 8px;
-    grid-row: 2 / 3;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    @media (width >= 768px) {
-      display: contents;
-    }
-  }
 }

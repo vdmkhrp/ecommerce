@@ -31,6 +31,36 @@ body {
   overflow: hidden;
 }
 
-.swiper {
-  width: 100%;
+.glide {
+  width: calc(100% + 16px);
+  overflow: auto;
+  grid-row: 2 / 3;
+  margin-inline: -8px;
+
+  @media (width >= 375px) {
+    margin-inline: -16px;
+    width: calc(100% + 32px);
+  }
+
+}
+
+.glide__slide {
+  display: flex;
+}
+
+.glide__track {
+  padding-inline: 8px;
+
+  @media (width >= 375px) {
+    padding-inline: 16px;
+  }
+}
+
+@media (width >= 768px) {
+  .glide,
+  .glide__track,
+  .glide__slides,
+  .glide__slide {
+    display: contents;
+  }
 }

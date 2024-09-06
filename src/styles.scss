@@ -1,11 +1,11 @@
+//-----library
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
 // base
 @import "./scss/base/custom-reset";
 @import "./scss/base/variables";
 @import "./scss/base/typography";
 @import "./scss/base/general";
-
-//slider
-@import "swiper/scss";
 
 //components
 @import "./scss/components/icon";
@@ -16,7 +16,7 @@
 @import "./scss/components/block-info";
 @import "./scss/components/main-btn";
 @import "./scss/components/circle";
-@import "./scss/components/product-card";
+@import "./scss/components/product-cards";
 @import "./scss/components/support-card";
 
 // sections

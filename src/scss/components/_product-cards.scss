@@ -1,0 +1,150 @@
+.product-cards {
+  $root: &;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
+  column-gap: 8px;
+  padding-bottom: 40px;
+
+  > :nth-child(3n) {
+    grid-column: span 2;
+  }
+
+  @media (hover: hover) {
+    &:has(.product-card:hover) {
+      .product-card:not(:hover) {
+        filter: blur(1px);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media (width >= 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 10px;
+    padding-bottom: 32px;
+
+    > :nth-child(3n) {
+      grid-column: span 1;
+    }
+  }
+
+  &__item {
+    position: relative;
+    transition-property: filter, opacity, scale;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+
+    @media (hover: hover) {
+      &:hover {
+        scale: 1.02;
+
+        #{$root} {
+          &__image {
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &--large {
+      #{$root} {
+        &__image {
+          min-height: 196px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    transition: box-shadow $animation-duration linear;
+
+    &--active {
+      background-color: $soft-red;
+      box-shadow: $main-shadow;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $soft-red;
+      }
+    }
+
+    @media (width >= 768px) {
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    @media (width >= 768px) {
+      row-gap: 12px;
+    }
+  }
+
+  &__image {
+    border-radius: 24px;
+    height: 164px;
+
+    @media (hover: hover) {
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        box-shadow: $main-shadow;
+        transition: opacity 300ms linear;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+    @media (width >= 768px) {
+      border-radius: 40px;
+      height: 374px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: inherit;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+
+  &__title {
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 500;
+    line-height: 1.7777;
+    letter-spacing: -0.05555em;
+    color: $black--400;
+  }
+
+  &__price {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.75;
+    letter-spacing: -0.0625em;
+    color: rgba($black--900, 0.8);
+  }
+}

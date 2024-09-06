@@ -26,12 +26,19 @@
     display: flex;
     align-items: center;
     column-gap: 8px;
-    margin-right: -16px;
+    margin-inline: -8px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    padding-right: 16px;
+    scroll-padding-inline: 8px;
+    padding-inline: 8px;
+
+    @media (width >= 375px) {
+      margin-inline: -16px;
+      padding-inline: 16px;
+      scroll-padding-inline: 16px;
+    }
 
     @media (width >= 768px) {
       column-gap: 10px;
@@ -47,64 +54,6 @@
       color: $light;
       pointer-events: none;
     }
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, min-content);
-    row-gap: 16px;
-    column-gap: 8px;
-    grid-template-areas:
-      "first second"
-      "third third"
-      "fourth fifth"
-      "sixth sixth";
-    padding-bottom: 40px;
-
-    @media (hover: hover) {
-      &:has(.product-card:hover) {
-        .product-card:not(:hover) {
-          filter: blur(1px);
-          opacity: 0.8;
-        }
-      }
-    }
-
-    @media (width >= 768px) {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, min-content);
-      row-gap: 20px;
-      column-gap: 10px;
-      grid-template-areas:
-        "first second third third"
-        "fourth fourth fifth sixth";
-      padding-bottom: 32px;
-    }
-  }
-
-  &__grid-first {
-    grid-area: first;
-  }
-
-  &__grid-second {
-    grid-area: second;
-  }
-
-  &__grid-third {
-    grid-area: third;
-  }
-
-  &__grid-fourth {
-    grid-area: fourth;
-  }
-
-  &__grid-fifth {
-    grid-area: fifth;
-  }
-
-  &__grid-sixth {
-    grid-area: sixth;
   }
 
   &__footer {
@@ -213,13 +162,7 @@
     &--active {
       background-color: $grey--400;
       color: $light;
-      box-shadow: rgba($black--900, 0.17) 0px -23px 25px 0px inset,
-        rgba($black--900, 0.15) 0px -36px 30px 0px inset,
-        rgba($black--900, 0.1) 0px -79px 40px 0px inset,
-        rgba($black--900, 0.06) 0px 2px 1px, rgba($black--900, 0.09) 0px 4px 2px,
-        rgba($black--900, 0.09) 0px 8px 4px,
-        rgba($black--900, 0.09) 0px 16px 8px,
-        rgba($black--900, 0.09) 0px 32px 16px;
+      box-shadow: $main-shadow;
     }
   }
 }
