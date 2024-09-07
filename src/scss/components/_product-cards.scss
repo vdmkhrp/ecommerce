@@ -8,6 +8,12 @@
 
   > :nth-child(3n) {
     grid-column: span 2;
+
+    #{$root} {
+      &__image {
+        min-height: 196px;
+      }
+    }
   }
 
   @media (hover: hover) {
@@ -28,12 +34,16 @@
     > :nth-child(3n) {
       grid-column: span 1;
     }
+
+    .product-cards__item--large {
+      grid-column: span 2;
+    }
   }
 
   &__item {
     position: relative;
     transition-property: filter, opacity, scale;
-    transition-duration: 300ms;
+    transition-duration: $animation-duration;
     transition-timing-function: linear;
 
     @media (hover: hover) {
@@ -46,14 +56,6 @@
               opacity: 1;
             }
           }
-        }
-      }
-    }
-
-    &--large {
-      #{$root} {
-        &__image {
-          min-height: 196px;
         }
       }
     }
@@ -106,7 +108,7 @@
         inset: 0;
         border-radius: inherit;
         box-shadow: $main-shadow;
-        transition: opacity 300ms linear;
+        transition: opacity $animation-duration linear;
         opacity: 0;
         z-index: -1;
       }

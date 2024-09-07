@@ -16,10 +16,8 @@
   }
 
   &__link {
-    font-size: 13px;
+    @extend .link-text;
     color: $grey--400;
-    font-weight: 500;
-    line-height: 1.2307;
     transition: color $animation-duration ease;
 
     @media (hover: hover) {

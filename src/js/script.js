@@ -1,33 +1,51 @@
 import Glide from "@glidejs/glide";
 
 const destroyGlideMediaQuery = window.matchMedia("(width >= 768px)");
-const glide = new Glide(".glide", {
-  type: "carousel",
-  perView: 1,
-  peek: {
-    before: 0,
-    after: 100,
-  },
-  gap: 16,
-  breakpoints: {
-    767: {
-      perView: 2,
+let glide;
+let glideMounted = false;
+
+function initGlide() {
+  glide = new Glide(".glide", {
+    type: "carousel",
+    perView: 1,
+    peek: {
+      before: 0,
+      after: 100,
     },
-    424: {
-      perView: 1,
+    gap: 16,
+    breakpoints: {
+      767: {
+        perView: 2,
+      },
+      424: {
+        perView: 1,
+      },
+      374: {
+        gap: 8,
+        perView: 1,
+      },
     },
-    374: {
-      gap: 8,
-      perView: 1,
-    },
-  },
-});
+  });
+}
+
+function handleGlide() {
+  if (destroyGlideMediaQuery.matches) {
+    if (glideMounted) {
+      glide.destroy();
+      glideMounted = false;
+    }
+  } else {
+    if (!glideMounted) {
+      initGlide();
+      glide.mount();
+      glideMounted = true;
+    }
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
-  glide.mount();
-  destroyGlideMediaQuery.addEventListener("change", function (event) {
-    event.matches ? glide.destroy() : glide.mount();
-  });
+  handleGlide();
+  destroyGlideMediaQuery.addEventListener("change", handleGlide);
 });
 
 const burgerBtn = document.querySelector(".burger-btn");

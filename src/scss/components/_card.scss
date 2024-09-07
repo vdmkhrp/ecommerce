@@ -13,7 +13,6 @@
   transition-duration: $animation-duration;
   transition-timing-function: linear;
 
-
   @media (width >= 768px) {
     padding: 30px;
     min-height: 380px;
@@ -52,15 +51,8 @@
   }
 
   &__text {
-    font-size: 16px;
-    line-height: 1.625;
-    letter-spacing: -0.0187em;
-    color: $light;
-
-    @media (width >= 768px) {
-      font-size: 18px;
-      line-height: 1.4444;
-    }
+    @extend .main-text--large;
+    color: rgba($light, 0.8);
   }
 
   &__box {

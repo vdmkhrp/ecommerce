@@ -27,20 +27,6 @@
     }
   }
 
-  &__logo {
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 1.25;
-    color: $black--900;
-    text-transform: uppercase;
-
-    @media (hover: hover) {
-      &:hover {
-        color: $soft-blue;
-      }
-    }
-  }
-
   &__menu {
     display: flex;
     position: fixed;
@@ -100,7 +86,7 @@
 
     @media (hover: hover) {
       &:hover {
-        color: $grey--400;
+        color: $soft-red;
       }
     }
 
@@ -170,7 +156,6 @@
   }
 
   &__grid-second {
-    background-image: url("./img/hero_2.webp");
     @media (width >= 768px) {
       grid-area: second;
     }
@@ -178,7 +163,6 @@
 
   &__grid-third {
     grid-row: 3 / 3;
-    background-image: url("./img/hero_3.webp");
 
     @media (width >= 768px) {
       grid-area: third;
@@ -193,7 +177,6 @@
 
   &__grid-fifth {
     grid-row: 2 / 3;
-    background-image: url("./img/hero_4.webp");
 
     @media (width >= 768px) {
       grid-area: fifth;
@@ -202,7 +185,6 @@
 
   &__grid-sixth {
     grid-row: 2 / 3;
-    background-image: url("./img/hero_5.webp");
 
     @media (width >= 768px) {
       grid-area: sixth;

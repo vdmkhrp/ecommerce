@@ -31,23 +31,10 @@
 
   &__logo {
     width: fit-content;
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 1.25;
-    color: $light;
-    text-transform: uppercase;
-    transition: color $animation-duration linear;
-
-    @media (hover: hover) {
-      &:hover {
-        color: $soft-red;
-      }
-    }
   }
 
   &__description {
-    font-size: 14px;
-    line-height: 1.5714;
+    @extend .main-text;
     opacity: 0.52;
     max-width: 290px;
   }
@@ -78,7 +65,6 @@
 
       &::placeholder {
         color: $light;
-        transition: color $animation-duration ease;
       }
     }
   }
@@ -109,9 +95,7 @@
   }
 
   &__link {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.2307;
+    @extend .link-text;
     color: rgba($light, 0.52);
     transition: color $animation-duration ease;
 

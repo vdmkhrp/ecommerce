@@ -10,10 +10,3 @@ $icon-sizes: 20, 21, 24, 32, 50;
     }
   }
 }
-
-
-.icon--32 {
-  @media (width >= 768px) {
-    width: 48px;
-  }
-}

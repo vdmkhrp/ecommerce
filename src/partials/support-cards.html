@@ -1,0 +1,15 @@
+<div class="support-cards">
+  {{#each supportCards}}
+  <article class="support-cards__item">
+    <span class="support-cards__img">
+      <svg class="icon icon--32 support-cards__icon">
+        <use href="{{use}}"></use>
+      </svg>
+    </span>
+    <div class="support-cards__content">
+      <h6 class="support-cards__title">{{title}}</h6>
+      <p class="support-cards__text">{{text}}</p>
+    </div>
+  </article>
+  {{/each}}
+</div>
