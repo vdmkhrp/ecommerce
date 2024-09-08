@@ -21,7 +21,7 @@ const getHtmlInputs = () => {
 
 export default defineConfig({
   root: __dirname,
-  base: "./",
+  base: '',
   plugins: [
     handlebars(handlebarsConfig),
     createHtmlPlugin({
@@ -33,6 +33,9 @@ export default defineConfig({
       input: {
         ...getHtmlInputs(),
         main: resolve(__dirname, "src/js/script.js"),
+      },
+      output: {
+        assetFileNames: 'assets/[name][extname]',
       },
     },
     outDir: "dist",
