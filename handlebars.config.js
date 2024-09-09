@@ -9,42 +9,36 @@ const productCards = [
     url: "./src/img/shoes_1.webp",
     title: "Casual Shoe",
     price: "$225",
-    isLarge: false,
   },
   {
     link: "#!",
     url: "./src/img/shoes_2.webp",
     title: "Skateboard Shoe",
     price: "$125",
-    isLarge: false,
   },
   {
     link: "#!",
     url: "./src/img/shoes_3.webp",
     title: "Skateboard Shoe",
     price: "$125",
-    isLarge: true,
   },
   {
     link: "#!",
     url: "./src/img/shoes_4.webp",
     title: "Skateboard Shoe",
     price: "$125",
-    isLarge: true,
   },
   {
     link: "#!",
     url: "./src/img/shoes_5.webp",
     title: "Basket Shoe",
     price: "$125",
-    isLarge: false,
   },
   {
     link: "#!",
     url: "./src/img/shoes_6.webp",
     title: "Skateboard Shoe",
     price: "$125",
-    isLarge: false,
   },
 ];
 

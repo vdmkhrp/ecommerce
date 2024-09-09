@@ -34,9 +34,6 @@ export default defineConfig({
         ...getHtmlInputs(),
         main: resolve(__dirname, "src/js/script.js"),
       },
-      output: {
-        assetFileNames: 'assets/[name][extname]',
-      },
     },
     outDir: "dist",
     assetsDir: "assets",
